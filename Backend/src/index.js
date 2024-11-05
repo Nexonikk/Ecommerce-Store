@@ -8,7 +8,13 @@ import productsRoute from "./routes/products.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://ecommerce-store-mu-coral.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 dotenv.config();

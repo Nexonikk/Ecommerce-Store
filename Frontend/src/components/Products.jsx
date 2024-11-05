@@ -14,7 +14,7 @@ function Products() {
     const getProducts = async () => {
       try {
         // https://api.escuelajs.co/api/v1/products
-        const res = await axios.get("http://localhost:4001/products")
+        const res = await axios.get("https://ecommerce-store-9epl.onrender.com/products");
 
         console.log(res.data);
         setProducts(res?.data);
